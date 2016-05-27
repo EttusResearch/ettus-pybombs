@@ -25,6 +25,8 @@ config:
         uhd:
             forceinstalled: False
             forcebuild: True
+            source: git@github.com:EttusResearch/uhddev-rfnoc.git
+            gitbranch: rfnoc-radio-redo
         gnuradio:
             forceinstalled: False
             forcebuild: True
@@ -32,11 +34,18 @@ config:
                    cmake .. \
                    -DCMAKE_TOOLCHAIN_FILE=../cmake/Toolchains/oe-sdk_cross.cmake \
                    -DCMAKE_INSTALL_PREFIX=/usr \
-                   -DENABLE_GR_VOCODER=OFF -DENABLE_GR_ATSC=OFF  -DENABLE_GR_WXGUI=OFF \
+                   -DENABLE_GR_VOCODER=OFF -DENABLE_GR_ATSC=OFF -DENABLE_GR_WXGUI=OFF \
                    -DENABLE_GR_DTV=OFF $config_opt
         gqrx:
             forceinstalled: False
             forcebuild: True
+        gr-ettus:
+            forceinstalled: False
+            forcebuild: True
+            source: git@github.com:EttusResearch/gr-ettusdev.git
+            gitbranch: radio-redo
 depends:
 - uhd
+- gnuradio
+- gr-ettus
 

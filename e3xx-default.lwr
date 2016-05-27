@@ -1,9 +1,12 @@
+# vim:ft=yaml:
 # Prefix recipe:
 # E3XX SDK Release 4, default libraries
 
 inherit: prefix
+dirs:
+    usr: True
 files:
-  set_env: |
+  usr/set_env: |
     LOCALPREFIX=~/usr
     export PATH=$LOCALPREFIX/bin:$PATH
     export LD_LOAD_LIBRARY=$LOCALPREFIX/lib:$LD_LOAD_LIBRARY
