@@ -1,0 +1,17 @@
+# Prefix recipe:
+# E3XX SDK Release 4, default libraries
+
+inherit: prefix
+files:
+  set_env: |
+    LOCALPREFIX=~/usr
+    export PATH=$LOCALPREFIX/bin:$PATH
+    export LD_LOAD_LIBRARY=$LOCALPREFIX/lib:$LD_LOAD_LIBRARY
+    export LD_LIBRARY_PATH=$LOCALPREFIX/lib:$LD_LIBRARY_PATH
+    export PYTHONPATH=$LOCALPREFIX/lib/python2.7/site-packages:$PYTHONPATH
+    export PKG_CONFIG_PATH=$LOCALPREFIX/lib/pkgconfig:$PKG_CONFIG_PATH
+    export GRC_BLOCKS_PATH=$LOCALPREFIX/share/gnuradio/grc/blocks:$GRC_BLOCKS_PATH
+    export UHD_RFNOC_DIR=$LOCALPREFIX/share/uhd/rfnoc/
+    export UHD_IMAGES_DIR=$LOCALPREFIX/share/uhd/images
+sdk: e3xx-release4-sdk
+

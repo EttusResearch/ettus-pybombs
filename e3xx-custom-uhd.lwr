@@ -1,0 +1,41 @@
+# Prefix recipe:
+# E3XX SDK Release 4, custom UHD+GNU Radio
+
+inherit: prefix
+files:
+  set_env: |
+    LOCALPREFIX=~/usr
+    export PATH=$LOCALPREFIX/bin:$PATH
+    export LD_LOAD_LIBRARY=$LOCALPREFIX/lib:$LD_LOAD_LIBRARY
+    export LD_LIBRARY_PATH=$LOCALPREFIX/lib:$LD_LIBRARY_PATH
+    export PYTHONPATH=$LOCALPREFIX/lib/python2.7/site-packages:$PYTHONPATH
+    export PKG_CONFIG_PATH=$LOCALPREFIX/lib/pkgconfig:$PKG_CONFIG_PATH
+    export GRC_BLOCKS_PATH=$LOCALPREFIX/share/gnuradio/grc/blocks:$GRC_BLOCKS_PATH
+    export UHD_RFNOC_DIR=$LOCALPREFIX/share/uhd/rfnoc/
+    export UHD_IMAGES_DIR=$LOCALPREFIX/share/uhd/images
+sdk: e3xx-release4-sdk
+config:
+    categories:
+        hardware:
+            forcebuild: True
+        common:
+            forcebuild: True
+    packages:
+        uhd:
+            forceinstalled: False
+            forcebuild: True
+        gnuradio:
+            forceinstalled: False
+            forcebuild: True
+            config_filter: |
+                   cmake .. \
+                   -DCMAKE_TOOLCHAIN_FILE=../cmake/Toolchains/oe-sdk_cross.cmake \
+                   -DCMAKE_INSTALL_PREFIX=/usr \
+                   -DENABLE_GR_VOCODER=OFF -DENABLE_GR_ATSC=OFF  -DENABLE_GR_WXGUI=OFF \
+                   -DENABLE_GR_DTV=OFF $config_opt
+        gqrx:
+            forceinstalled: False
+            forcebuild: True
+depends:
+- uhd
+
