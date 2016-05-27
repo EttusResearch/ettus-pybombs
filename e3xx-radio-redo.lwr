@@ -25,7 +25,6 @@ config:
         uhd:
             forceinstalled: False
             forcebuild: True
-            source: git@github.com:EttusResearch/uhddev-rfnoc.git
             gitbranch: rfnoc-radio-redo
         gnuradio:
             forceinstalled: False
@@ -42,7 +41,6 @@ config:
         gr-ettus:
             forceinstalled: False
             forcebuild: True
-            source: git@github.com:EttusResearch/gr-ettusdev.git
             gitbranch: radio-redo
 depends:
 - uhd
