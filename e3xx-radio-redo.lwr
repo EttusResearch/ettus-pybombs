@@ -3,6 +3,8 @@
 # E3XX SDK Release 4, custom UHD+GNU Radio
 
 inherit: prefix
+dirs:
+    usr: True
 files:
   usr/set_env: |
     LOCALPREFIX=~/usr
