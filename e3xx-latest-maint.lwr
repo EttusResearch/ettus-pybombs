@@ -38,7 +38,6 @@ config:
                    -DENABLE_GR_VOCODER=OFF -DENABLE_GR_ATSC=OFF  -DENABLE_GR_WXGUI=OFF \
                    -DENABLE_GR_DTV=OFF $config_opt
         gqrx:
-            gitbranch: maint
             forceinstalled: False
             forcebuild: True
 depends:
