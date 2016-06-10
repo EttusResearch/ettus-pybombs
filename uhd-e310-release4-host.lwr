@@ -1,0 +1,15 @@
+# Initializes a prefix with UHD configured to support network mode from
+# a host computer for the E310, release 4.
+
+inherit: prefix
+config:
+    packages:
+        uhd:
+            forcebuild: True
+            gitargs: ''
+            gitrev: release_003_009_002
+            vars:
+                    config_opt: " -DENABLE_E300=ON -DE300_FORCE_NETWORK=ON "
+depends:
+        - uhd
+
