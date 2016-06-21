@@ -1,0 +1,10 @@
+# Pulls in FPGA repo into current prefix
+
+category: hardware
+depends: null
+source: git+https://github.com/EttusResearch/fpga.git
+gitbranch: master
+inherit: empty
+configuredir: .
+makedir: .
+installdir: .
