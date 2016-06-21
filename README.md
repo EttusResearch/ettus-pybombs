@@ -3,7 +3,7 @@
 ## List of recipes
 
 | Name                    | Type   | Description
-+-------------------------+--------+--------------------------------------------------------------------------
+|-------------------------|--------|--------------------------------------------------------------------------
 | e3xx-default            | prefix | E310 cross-compile environment with default UHD (as shipped on SD card)
 | e3xx-custom-uhd         | prefix | E310 cross-compile environment with latest UHD (master branch)
 | e3xx-latest-maint       | prefix | E310 cross-compile environment with latest UHD (maint branch)
