@@ -10,6 +10,8 @@ config:
         gr-ettus:
             gitbranch: radio-redo
             forcebuild: True
+        uhd-fpga:
+            gitbranch: rfnoc-radio-redo
 depends:
 - gnuradio
 - uhd
