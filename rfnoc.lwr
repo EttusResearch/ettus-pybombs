@@ -1,0 +1,17 @@
+# Initializes a prefix with the necessary configuration to support RFNoC and RFNoC modtool
+inherit: prefix 
+config:
+    packages:
+        uhd: 
+            gitbranch: rfnoc-radio-redo
+            forcebuild: True
+        gnuradio:
+            forcebuild: True
+        gr-ettus:
+            gitbranch: radio-redo
+            forcebuild: True
+depends:
+- gnuradio
+- uhd
+- gr-ettus
+- uhd-fpga
