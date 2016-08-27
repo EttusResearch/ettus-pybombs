@@ -9,6 +9,7 @@ config:
 installdir: .
 source: wget+http://files.ettus.com/e3xx_images/e3xx-release-4/oecore-x86_64-armv7ahf-vfp-neon-toolchain-nodistro.0.sh
 #source: file+/path/to/oecore-x86_64-armv7ahf-vfp-neon-toolchain-nodistro.0.sh
+md5: 07c864b0af1c5551156a3140370d7bb6
 install: sh ./oecore-x86_64-armv7ahf-vfp-neon-toolchain-nodistro.0.sh -y -d $prefix
 clean: [oecore-x86_64-armv7ahf-vfp-neon-toolchain-nodistro.0.sh, ]
 env:
