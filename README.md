@@ -7,7 +7,7 @@
 | e3xx-default            | prefix | E310 cross-compile environment with default UHD (as shipped on SD card)
 | e3xx-custom-uhd         | prefix | E310 cross-compile environment with latest UHD (master branch)
 | e3xx-latest-maint       | prefix | E310 cross-compile environment with latest UHD (maint branch)
-| e3xx-radio-redo         | prefix | E310 cross-compile environment with rfnoc-radio-redo branch, includes gr-ettus
+| e3xx-rfnoc              | prefix | E310 cross-compile environment with rfnoc-devel branch, includes gr-ettus
 | uhd-e310-release4-host  | prefix | Host-side environment to use a release 4 E310 in network mode
 | e3xx-release4-sdk       | sdk    | E310 release 4 SDK
 
