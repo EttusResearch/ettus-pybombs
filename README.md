@@ -36,7 +36,7 @@ See the PyBOMBS manual for more details:
 
 ## Using these recipes
 
-There different types of recipes:
+There are different types of recipes:
 
 - Package recipes
 - Prefix recipes
