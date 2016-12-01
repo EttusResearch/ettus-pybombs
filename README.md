@@ -4,6 +4,7 @@
 
 | Name                    | Type   | Description
 |-------------------------|--------|--------------------------------------------------------------------------
+| rfnoc                   | prefix | Native rfnoc-devel configuration, includes gr-ettus (e.g. for X310 dev)
 | e3xx-default            | prefix | E310 cross-compile environment with default UHD (as shipped on SD card)
 | e3xx-custom-uhd         | prefix | E310 cross-compile environment with latest UHD (master branch)
 | e3xx-latest-maint       | prefix | E310 cross-compile environment with latest UHD (maint branch)
