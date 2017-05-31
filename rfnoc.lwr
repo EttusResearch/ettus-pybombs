@@ -1,8 +1,8 @@
 # Initializes a prefix with the necessary configuration to support RFNoC and RFNoC modtool
-inherit: prefix 
+inherit: prefix
 config:
     packages:
-        uhd: 
+        uhd:
             gitbranch: rfnoc-devel
             forcebuild: True
         gnuradio:
@@ -16,4 +16,5 @@ depends:
 - gnuradio
 - uhd
 - gr-ettus
+- pyqt5
 - uhd-fpga
