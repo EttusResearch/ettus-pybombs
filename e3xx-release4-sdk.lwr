@@ -34,6 +34,7 @@ packages:
   # gnuradio is in category common
   gnuradio:
     forcebuild: true
+    gitrev: v3.7.9.2
     config_filter: |
            cmake .. \
            -DCMAKE_TOOLCHAIN_FILE=../cmake/Toolchains/oe-sdk_cross.cmake \

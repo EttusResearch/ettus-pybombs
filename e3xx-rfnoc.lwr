@@ -27,7 +27,9 @@ config:
         uhd:
             forceinstalled: False
             forcebuild: True
-            gitbranch: rfnoc-devel
+            gitbranch: master
+            vars:
+              config_opt: " -DENABLE_RFNOC=ON "
         gnuradio:
             forceinstalled: False
             forcebuild: True
