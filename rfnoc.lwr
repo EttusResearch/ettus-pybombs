@@ -8,6 +8,7 @@ config:
             vars:
               config_opt: " -DENABLE_RFNOC=ON "
         gnuradio:
+            gitbranch: maint-3.7
             forcebuild: True
         gr-ettus:
             gitbranch: master
